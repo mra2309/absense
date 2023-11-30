@@ -12,10 +12,32 @@ const themeData = ["light",
 "wireframe",
 "coffee"]
 
+var namaBulan = [
+  "Januari", "Februari", "Maret",
+  "April", "Mei", "Juni",
+  "Juli", "Agustus", "September",
+  "Oktober", "November", "Desember"
+];
+
+var namaHari = [
+  "Minggu", "Senin", "Selasa",
+  "Rabu", "Kamis", "Jumat", "Sabtu"
+];
+
 export default function Home() {
   const [theme, setTheme] = useState("");
   const [visible, setVisible] = useState(false);
   const [themes, setThemes] = useState("default");
+
+  let newDate = new Date()
+  let date = newDate.getDate();
+  let day  = newDate.getDay();
+  let dayString = namaHari[day];
+  let month = newDate.getMonth() + 1;
+  let monthString = namaBulan[month];
+  let year = newDate.getFullYear();
+
+
   return (
     <div data-theme={themes}>
       <div className='flex flex-col min-h-screen'>
@@ -24,10 +46,10 @@ export default function Home() {
         <div className='card max-w-full m-auto'>
           <div className='card-body text-center'>
           <div className='md:text-9xl text-5xl font-semibold'>
-                  SENIN
+                  {dayString}
             </div>
             <div className='md:text-9xl text-5xl  font-semibold my-4'>
-                  30 NOVEMBER 2023
+                  {date} {monthString} {year}
             </div>
             <div className='md:text-9xl text-5xl  font-semibold'>
              {theme} 

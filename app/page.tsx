@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="form-control" key={index}>
                     <label className="label cursor-pointer gap-4">
                     <span className="label-text">{item}</span>
-                    <input type="radio" name="theme-radios" className="radio theme-controller" onClick={(e)=>setThemes(e.target.value)} value={item}/>
+                    <input type="radio" name="theme-radios" className="radio theme-controller" onClick={(e)=>setThemes ((e.target as HTMLInputElement).value)} value={item}/>
                     </label>
                 </div>
               )

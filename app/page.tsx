@@ -9,6 +9,7 @@ const themeData = ["light",
 "bumblebee",
 "corporate",
 "fantasy",
+"black",
 "wireframe",
 "coffee"]
 
@@ -45,13 +46,13 @@ export default function Home() {
        <>
         <div className='card max-w-full m-auto'>
           <div className='card-body text-center'>
-          <div className='md:text-9xl text-5xl font-semibold'>
+          <div className='md:text-9xl text-2xl font-semibold uppercase'>
                   {dayString}
             </div>
-            <div className='md:text-9xl text-5xl  font-semibold my-4'>
+            <div className='md:text-9xl text-2xl  font-semibold my-4 uppercase'>
                   {date} {monthString} {year}
             </div>
-            <div className='md:text-9xl text-5xl  font-semibold'>
+            <div className='md:text-9xl text-2xl  font-semibold'>
              {theme} 
             </div>
             <button className="btn btn-circle m-auto" onClick={(e)=>setVisible(false)}>

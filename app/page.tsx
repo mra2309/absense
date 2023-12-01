@@ -34,7 +34,7 @@ export default function Home() {
   let date = newDate.getDate();
   let day  = newDate.getDay();
   let dayString = namaHari[day];
-  let month = newDate.getMonth() + 1;
+  let month = newDate.getMonth() ;
   let monthString = namaBulan[month];
   let year = newDate.getFullYear();
 
